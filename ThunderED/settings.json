@@ -1,0 +1,839 @@
+﻿{
+  "config": {
+    "botDiscordToken": "OTg5OTY0OTMxNDE3ODk5MDE4.G8qzPd.kiTXKjZoQ8RINveeEG_XiPZBTSU9y_nsXuGH04",
+    "botDiscordName": "CAPSTEXT",
+    "botDiscordGame": "EVE Online",
+    "botDiscordCommandPrefix": "!",
+    "discordGuildId": 989664078362451968,
+    "discordAdminRoles": [ "Admins" ],
+    "DiscordAllowGeneralCommandsOnSecondaryGuilds": true,
+    "DiscordAllowSystemCommandsOnSecondaryGuilds": true,
+    "comForbiddenChannels": [ 993479322558025808 ],
+    "comAllowedChannels": [ 989664078362451971 ],
+    "SearchCharacterId": 903243860,
+    "language": "en-US",
+    "useEnglishESIOnly": "true",
+    "moduleAuthCheck": true,
+    "moduleAuthWeb": true,
+    "moduleCharCorp": true,
+    "moduleLiveKillFeed": true,
+    "modulePriceCheck": true,
+    "moduleTime": true,
+    "moduleJabber": false,
+    "moduleMOTD": false,
+    "moduleNotificationFeed": true,
+    "moduleTimers": true,
+    "moduleMail": true,
+    "moduleIRC": false,
+    "moduleTelegram": true,
+    "moduleChatRelay": true,
+    "moduleIncursionNotify": false,
+    "moduleNullsecCampaign": false,
+    "moduleFWStats": false,
+    "ModuleLPStock": false,
+    "moduleHRM": true,
+    "ModuleSystemLogFeeder": false,
+    "ModuleStats": false,
+    "ModuleContractNotifications": true,
+    "ModuleSovTracker": false,
+    "ModuleWebConfigEditor": true,
+    "ModuleIndustrialJobs": false,
+    "ModuleMiningSchedule": false,
+    "ModuleStructureManagement": true,
+    "ModuleMoonTable": false,
+    "ModuleStorageConsole": false,
+    "ModuleFitChecker": false,
+    "timeFormat": "dd.MM.yyyy HH:mm:ss",
+    "shortTimeFormat": "dd.MM.yyyy HH:mm",
+    "dateFormat": "dd.MM.yyyy",
+    "welcomeMessage": false,
+    "WelcomeMessageChannelId": 989664078362451971,
+    "cachePurgeInterval": 600,
+    "memoryUsageLimitMb": 300,
+    "logSeverity": "Info",
+    "UseSingleFileForLogging": false,
+    "logNewNotifications": true,
+    "requestRetries": 3,
+    "ConcurrentThreadsCount": 4,
+    "extendedESILogging": true,
+    "ESIAddress": "https://esi.evetech.net/",
+    "RunAsServiceCompatibility": false,
+    "DisableLogIntoFiles": true,
+    "LanguageFilesFolder": "",
+    "EnableLegacyRestartLogic": false,
+    "EnableSwatch": false,
+    "WebSessionTimeout": 60
+  },
+  "webServerModule": {
+    "UsePortInUrl": false,
+    "webExternalIP": "capstext.online",
+    "webExternalPort": 80,
+    "discordUrl": "https://discord.gg/3t73Cf3hWb",
+    "ZkbUrl": "https://zkillboard.com/alliance/99011318/",
+    "ccpAppClientId": "2cfd538d32a84ec7994460f370888bba",
+    "ccpAppSecret": "RhQbCCAfBoLoq5Zw5eRvRGqkABUfm8jdNgoEaLiy",
+    "ServerStatusPort": 0,
+    "NoStatusResponseOnDiscordDisconnection": true,
+    "UseHTTPS": false,
+    "CertificatePath": "",
+    "CertificatePassword": "",
+    "CertificateStorageName": ""
+  },
+  "Database": {
+    "databaseProvider": "sqlite",
+    "databaseFile": "edb.db",
+    "ServerAddress": "",
+    "ServerPort": 0,
+    "DatabaseName": "",
+    "UserId": "",
+    "Password": "",
+    "CustomConnectionString": "",
+    "SqliteBackupFrequencyInHours": 8,
+    "SqliteBackupMaxFiles": 10
+  },
+  "ZKBSettingsModule": {
+    "ZKillboardWebSocketUrl": "wss://zkillboard.com/websocket/",
+    "AvoidDupesAcrossAllFeeds": true,
+    "OldKMDaysThreshold": 1
+  },
+  "WebAuthModule": {
+    "authCheckIntervalMinutes": 30,
+    "AuthTakeNumberOfUsersPerPass": 100,
+    "DisplayFeedAuthWithoutRegistration": true,
+    "StandingsRefreshIntervalInMinutes": 60,
+    "exemptDiscordRoles": [],
+    "AuthCheckIgnoreRoles": [],
+    "AuthCheckUnregisteredDiscordUsers": false,
+    "authReportChannel": 989664078362451971,
+    "//": "Channels where !auth command is allowed. Empty - everywhere",
+    "comAuthChannels": [
+      989671528645922846,
+      989664078362451971
+    ],
+    "DefaultAuthGroup": "Mode2_GeneralWithESIFetch",
+    "AutoClearAuthCommandsFromDiscord": true,
+    "enforceCorpTickers": true,
+    "enforceAllianceTickers": false,
+    "EnforceSingleTickerPerUser": true,
+    "enforceCharName": true,
+    "UseOneAuthButton": true,
+    "EnableDetailedLogging": true,
+    "AuthButtonDiscordText": "Member Auth",
+    "authGroups": {
+      "Mode2_GeneralWithESIFetch": {
+        "IsEnabled": true,
+        "ESICustomAuthRoles": [
+          "esi-calendar.respond_calendar_events.v1",
+          "esi-calendar.read_calendar_events.v1",
+          "esi-mail.organize_mail.v1",
+          "esi-mail.send_mail.v1",
+          "esi-wallet.read_corporation_wallet.v1",
+          "esi-search.search_structures.v1",
+          "esi-planets.manage_planets.v1",
+          "esi-fleets.write_fleet.v1",
+          "esi-ui.open_window.v1",
+          "esi-ui.write_waypoint.v1",
+          "esi-fittings.read_fittings.v1",
+          "esi-fittings.write_fittings.v1",
+          "esi-markets.structure_markets.v1",
+          "esi-characters.read_medals.v1",
+          "esi-location.read_location.v1",
+          "esi-location.read_ship_type.v1",
+          "esi-mail.read_mail.v1",
+          "esi-skills.read_skills.v1",
+          "esi-skills.read_skillqueue.v1",
+          "esi-wallet.read_character_wallet.v1",
+          "esi-clones.read_clones.v1",
+          "esi-characters.read_contacts.v1",
+          "esi-universe.read_structures.v1",
+          "esi-bookmarks.read_character_bookmarks.v1",
+          "esi-killmails.read_killmails.v1",
+          "esi-assets.read_assets.v1",
+          "esi-fleets.read_fleet.v1",
+          "esi-characters.write_contacts.v1",
+          "esi-characters.read_loyalty.v1",
+          "esi-characters.read_opportunities.v1",
+          "esi-characters.read_chat_channels.v1",
+          "esi-characters.read_standings.v1",
+          "esi-characters.read_agents_research.v1",
+          "esi-industry.read_character_jobs.v1",
+          "esi-markets.read_character_orders.v1",
+          "esi-characters.read_blueprints.v1",
+          "esi-characters.read_corporation_roles.v1",
+          "esi-location.read_online.v1",
+          "esi-contracts.read_character_contracts.v1",
+          "esi-clones.read_implants.v1",
+          "esi-characters.read_fatigue.v1",
+          "esi-characters.read_notifications.v1",
+          "esi-contracts.read_corporation_contracts.v1",
+          "esi-industry.read_character_mining.v1",
+          "esi-characters.read_titles.v1",
+          "esi-characters.read_fw_stats.v1",
+          "esi-characterstats.read.v1",
+          "esi-corporations.read_corporation_membership.v1",
+          "esi-corporations.read_structures.v1",
+          "esi-killmails.read_corporation_killmails.v1",
+          "esi-corporations.track_members.v1",
+          "esi-wallet.read_corporation_wallets.v1",
+          "esi-corporations.read_divisions.v1",
+          "esi-corporations.read_contacts.v1",
+          "esi-assets.read_corporation_assets.v1",
+          "esi-corporations.read_titles.v1",
+          "esi-corporations.read_blueprints.v1",
+          "esi-bookmarks.read_corporation_bookmarks.v1",
+          "esi-corporations.read_standings.v1",
+          "esi-corporations.read_starbases.v1",
+          "esi-industry.read_corporation_jobs.v1",
+          "esi-markets.read_corporation_orders.v1",
+          "esi-corporations.read_container_logs.v1",
+          "esi-industry.read_corporation_mining.v1",
+          "esi-planets.read_customs_offices.v1",
+          "esi-corporations.read_facilities.v1",
+          "esi-corporations.read_medals.v1",
+          "esi-alliances.read_contacts.v1",
+          "esi-corporations.read_fw_stats.v1"
+        ],
+        "AllowedMembers": {
+          "entry1": {
+            "Entities": [
+              "a:C A P S T E X T .",
+              "c:Penetration To Pod"
+            ],
+            "DiscordRoles": [
+              "Member"
+            ]
+          }
+        },
+        "authRoles": [
+          "Member"
+        ],
+        "Hidden": false,
+        "ManualAssignmentRoles": [],
+        "CustomButtonText": "ESI Auth",
+        "DefaultMention": ""
+      },
+      "Mode4_StandingsBased": {
+        "IsEnabled": true,
+        "ManualAssignmentRoles": [],
+        "PreliminaryAuthMode": false,
+        "ESICustomAuthRoles": [],
+        "CustomButtonText": "Standings Based Auth",
+        "DefaultMention": "",
+        "StandingsAuth": {
+          "CharacterIDs": [
+            903243860,
+            95195707,
+            2119664271
+          ],
+          "WebAdminButtonText": "Standings Admin Auth",
+          "UseCharacterStandings": true,
+          "UseCorporationStandings": true,
+          "UseAllianceStandings": true,
+          "StandingFilters": {
+            "defaultFilter": {
+              "Standings": [
+                1
+              ],
+              "Modifier": "gt",
+              "DiscordRoles": [
+                "Pluses"
+              ]
+            }
+          }
+        }
+      },
+      "Mode6_AltCharactersAuth": {
+        "IsEnabled": true,
+        "ESICustomAuthRoles": [
+          "esi-skills.read_skills.v1"
+        ],
+        "CustomButtonText": "Alt Characters Auth",
+        "BindToMainCharacter": true
+      }
+    }
+  },
+  "WebConfigEditorModule": {
+    "AccessList": {
+      "DefaultList": {
+        "AllowedEntities": [
+          "a:C A P S T E X T .",
+          "c:Best way to Die",
+          "c:Penetarion To POD",
+          "c:Mining and Research Collective",
+          "c:WHITE H0RSE",
+          "c:K E K C"
+        ],
+        "AllowedDiscordRoles": [
+          "Admins"
+        ],
+        "CanEditSimplifiedAuth": true,
+        "CanEditTimers": true,
+        "CanEditSettings": true
+      },
+      "list1": {
+        "IsEnabled": true,
+        "AllowedEntities": [],
+        "AllowedDiscordRoles": [
+          "Admins"
+        ],
+        "CanEditSimplifiedAuth": true,
+        "CanEditTimers": true,
+        "CanEditSettings": true
+      }
+    }
+  },
+  "SystemLogFeederModule": {
+    "DiscordChannelId": 991088285512265868,
+    "LogSeverity": "Info",
+    "SendInterval": 5
+  },
+  "ContinousCheckModule": {
+    "EnableTQStatusPost": true,
+    "TQStatusPostMention": "",
+    "TQStatusPostChannels": [
+      989671715242131456
+    ]
+  },
+  "CommandsConfig": {
+    "EnableShipsCommand": "true",
+    "ShipsCommandDiscordChannels": [],
+    "ShipsCommandDiscordRoles": [],
+    "EnableRoleManagementCommands": false,
+    "RolesCommandDiscordRoles": [
+      "Admins"
+    ],
+    "RolesCommandAllowedRoles": [
+      "Admins"
+    ],
+    "RolesCommandDiscordChannels": [
+      0
+    ]
+  },
+  "ContractNotificationsModule": {
+    "CheckIntervalInMinutes": 1,
+    "MaxTrackingCount": 150,
+    "UseOneAuthButton": false,
+    "AuthButtonDiscordText": "Contracts Auth",
+    "Groups": {
+      "group1": {
+        "IsEnabled": true,
+        "CharacterEntities": [
+          903243860,
+          95195707,
+          2119664271,
+          2115401777,
+          1609387042,
+          2114655511
+        ],
+        "ButtonText": "Default Contracts Auth",
+        "DefaultMention": "",
+        "FeedPersonalContracts": true,
+        "FeedCorporateContracts": true,
+        "StopOnFirstFilterMatch": false,
+        "Filters": {
+          "defaultFilter": {
+            "FeedIssuedBy": true,
+            "FeedIssuedTo": true,
+            "Statuses": [
+              "finished_issuer",
+              "finished_contractor",
+              "finished",
+              "cancelled",
+              "rejected",
+              "failed",
+              "deleted",
+              "reversed",
+              "in_progress",
+              "outstanding"
+            ],
+            "Availability": [
+              "public",
+              "personal",
+              "corporation",
+              "alliance"
+            ],
+            "Types": [
+              "unknown",
+              "item_exchange",
+              "auction",
+              "courier",
+              "loan"
+            ],
+            "ShowIngameOpen": true,
+            "DiscordChannelId": 989671528645922846,
+            "ShowOnlyBasicDetails": false,
+            "RedirectByIdInDescription": false,
+            "PostToChannelIfRedirected": false
+          }
+        }
+      }
+    }
+  },
+  "StatsModule": {
+    "EnableStatsCommand": true,
+    "RatingModeChannelId": 989671528645922846,
+    "DailyStatsGroups": {
+      "group1": {
+        "IsEnabled": true,
+        "DailyStatsChannel": 989671528645922846,
+        "DailyStatsCorp": 98703389,
+        "DailyStatsAlliance": 99011318,
+        "IncludeInRating": false
+      }
+    }
+  },
+  "HRMModule": {
+    "AccessList": {
+      "accessList1": {
+        "IsEnabled": true,
+        "UsersAccessList": [],
+        "RolesAccessList": [
+          "Admins"
+        ],
+        "AuthGroupNamesFilter": [],
+        "AuthAllianceIdFilter": [],
+        "AuthCorporationIdFilter": [],
+        "ApplyGroupFilterToAwaitingUsers": false,
+        "IsAwaitingUsersVisible": true,
+        "IsDumpedUsersVisible": true,
+        "IsAuthedUsersVisible": true,
+        "IsAltUsersVisible": true,
+        "IsSpyUsersVisible": true,
+        "CanSearchMail": true,
+        "CanKickUsers": true,
+        "CanMoveToSpies": true,
+        "CanInspectAuthedUsers": true,
+        "CanInspectAwaitingUsers": true,
+        "CanInspectDumpedUsers": true,
+        "CanInspectSpyUsers": true,
+        "CanInspectAltUsers": true,
+        "CanRestoreDumped": true,
+        "CanSeeIP": false,
+        "CanFetchToken": false
+      }
+    },
+    "AuthButtonDiscordText": "HR auth",
+    "AuthTimeoutInMinutes": 300,
+    "TableEntriesPerPage": 100,
+    "TableSkillEntriesPerPage": 20,
+    "UseDumpForMembers": true,
+    "DumpInvalidationInHours": 2400,
+    "DefaultSpiesMailFeedChannelId": 989671528645922846,
+    "ValidateTokensWhileLoading": true,
+    "SpyFilters": {
+      "filter1": {
+        "CorporationNames": [
+          98679428
+        ],
+        "AllianceNames": [],
+        "MailFeedChannelId": 989671528645922846,
+        "DisplayMailDetailsSummary": true
+      }
+    }
+  },
+  "mailModule": {
+    "checkIntervalInMinutes": 1,
+    "AuthButtonDiscordText": "Mail Feed Auth",
+    "Groups": {
+      "Group1": {
+        "IsEnabled": true,
+        "CharacterEntities": [
+          1397530396,
+          1609387042,
+          1950260451,
+          2112228637,
+          2115266970,
+          2116338809,
+          2117392582,
+          2118213032,
+          2119664271,
+          404347999,
+          903243860,
+          95195707,
+          95387609,
+          97203987,
+          97203987,
+          97203987,
+          994497848
+        ],
+        "IncludePrivateMail": true,
+        "DefaultChannel": 989672056574607391,
+        "DefaultMention": "",
+        "Filters": {
+          "CorpMailFilter": {
+            "FilterLabels": [
+              "[Corp]",
+              "[Alliance]"
+            ],
+            "FilterSenders": [],
+            "FilterMailList": [],
+            "FeedChannel": 989672056574607391,
+            "DisplayDetailsSummary": false
+          },
+          "MailListFilter": {
+            "FilterLabels": [],
+            "FilterSenders": [],
+            "FilterMailList": [],
+            "FeedChannel": 0,
+            "DisplayDetailsSummary": false
+          }
+        }
+      }
+    }
+  },
+  "timersModule": {
+    "authTimeoutInMinutes": 1,
+    "autoAddTimerForReinforceNotifications": true,
+    "TinyUrl": "",
+    "grantEditRolesToDiscordAdmins": true,
+    "announces": [
+      0,
+      1
+    ],
+    "announceChannel": 989672056574607391,
+    "TimeInputFormat": "DD.MM.YYYY HH:mm",
+    "DefaultMention": "@everyone",
+    "AuthButtonDiscordText": "Timers Page",
+    "accessList": {
+      "group1": {
+        "FilterEntities": [],
+        "FilterDiscordRoles": [
+          "Member"
+        ]
+      }
+    },
+    "editList": {
+      "group2": {
+        "FilterEntities": [],
+        "FilterDiscordRoles": [
+          "Admins"
+        ]
+      }
+    }
+  },
+  "resources": {
+    "imgCitLowPower": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitLowPower.png",
+    "imgCitUnderAttack": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitUnderAttack.png",
+    "imgCitAnchoring": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitAnchoring.png",
+    "imgCitDestroyed": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitDestroyed.png",
+    "imgCitLostShield": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitLostShield.png",
+    "imgCitLostArmor": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitLostArmor.png",
+    "imgCitOnline": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitOnline.png",
+    "imgCitFuelAlert": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitFuelAlert.png",
+    "imgCitServicesOffline": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCitServicesOffline.png",
+    "imgLowFWStand": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgLowFWStand.png",
+    "imgMoonComplete": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgMoonComplete.png",
+    "imgWarAssist": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgWarAssist.png",
+    "imgWarDeclared": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgWarDeclared.png",
+    "imgWarInvalidate": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgWarInvalidate.png",
+    "imgWarSurrender": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgWarSurrender.png",
+    "imgTimerAlert": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgTimerAlert.png",
+    "imgMail": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgMail.png",
+    "imgIncursion": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgIncursion.png",
+    "ImgFactionCaldari": "https://wiki.eveuniversity.org/images/e/e3/Logo_faction_caldari_state.png",
+    "ImgFactionGallente": "https://wiki.eveuniversity.org/images/b/b9/Logo_faction_gallente_federation.png",
+    "ImgFactionAmarr": "https://wiki.eveuniversity.org/images/a/a0/Logo_faction_amarr_empire.png",
+    "ImgFactionMinmatar": "https://wiki.eveuniversity.org/images/1/1f/Logo_faction_minmatar_republic.png",
+    "imgEntosisAlert": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgEntosisAlert.png",
+    "ImgContract": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgContract.png",
+    "ImgContractDelete": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgContractDelete.png",
+    "ImgNoLongerWarEligible": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgNoLongerWarEligible.png",
+    "ImgBecameWarEligible": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgBecameWarEligible.png",
+    "ImgWarInviteAccepted": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgWarInviteAccepted.png",
+    "ImgWarInviteRejected": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgWarInviteRejected.png",
+    "ImgWarInviteSent": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgWarInviteSent.png",
+    "ImgAllMaintenanceBillMsg": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgAllMaintenanceBillMsg.png",
+    "ImgBillOutOfMoneyMsg": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgBillOutOfMoneyMsg.png",
+    "ImgAllianceCapitalChanged": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgAllianceCapitalChanged.png",
+    "ImgBountyPlacedAlliance": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgBountyPlacedAlliance.png",
+    "ImgCorpKicked": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCorpKicked.png",
+    "ImgCorpNewCEOMsg": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCorpNewCEOMsg.png",
+    "ImgCorpTaxChangeMsg": "https://raw.githubusercontent.com/panthernet/ThunderED/master/ThunderED/Content/Icons/imgCorpTaxChangeMsg.png"
+  },
+  "notificationFeedModule": {
+    "checkIntervalInMinutes": 1,
+    "AuthButtonDiscordText": "Notifications Auth",
+    "groups": {
+      "Structures": {
+        "IsEnabled": true,
+        "CharacterEntities": [
+          1397530396,
+          1609387042,
+          1950260451,
+          2112228637,
+          2115266970,
+          2116338809,
+          2117392582,
+          2118213032,
+          2119664271,
+          404347999,
+          903243860,
+          95195707,
+          95387609,
+          97203987,
+          97203987,
+          97203987,
+          994497848
+        ],
+        "defaultDiscordChannelID": 989664078362451971,
+        "fetchLastNotifDays": 2,
+        "filters": {
+          "atacks": {
+            "notifications": [
+              "StructureUnderAttack",
+              "StructureWentLowPower",
+              "StructureWentHighPower",
+              "StructureLostArmor",
+              "StructureLostShields",
+              "StructureFuelAlert",
+              "OrbitalReinforced",
+              "AllAnchoringMsg",
+              "OwnershipTransferred",
+              "TowerResourceAlertMsg",
+              "TowerAlertMsg"
+            ],
+            "channelID": 989672585929302056,
+            "defaultMention": "",
+            "SpecialSettings": {
+              "DoNotReportNpcBashForCitadels": true
+            },
+            "charMentions": [],
+            "roleMentions": "@Operator"
+          },
+          "abandons": {
+            "notifications": [
+              "StructureImpendingAbandonmentAssetsAtRisk",
+              "StructureItemsMovedToSafety"
+            ],
+            "channelID": 993950741465137333,
+            "defaultMention": ""
+          },
+          "charMentions": [],
+          "roleMentions": "@Operator"
+        },
+        "warsonus": {
+          "notifications": [
+            "AllWarDeclaredMsg",
+            "AllyJoinedWarAggressorMsg",
+            "AllyJoinedWarAllyMsg",
+            "AllyJoinedWarDefenderMsg",
+            "MutualWarInviteAccepted"
+          ],
+          "channelID": 993953330017615993,
+          "defaultMention": ""
+        },
+        "charMentions": [],
+        "roleMentions": "@Member"
+      }
+    }
+  },
+  "Tracker": {
+    "GlobalFilterIn": [],
+    "GlobalFilterOut": [],
+    "UpdateIntervalInMinutes": 1,
+    "SkipCharactersInNpcCorps": false,
+    "Groups": {
+      "Group1": {
+        "IsEnabled": true,
+        "Notifications": [],
+        "DiscordChannels": [],
+        "FeedFromAllRegisteredUsers": true,
+        "FilterOut": [
+          "ignore"
+        ]
+      }
+    }
+  },
+  "motd": {
+    "motdkeyID": "",
+    "motdvCode": "",
+    "motdcharid": "",
+    "motdtopicchan": 0,
+    "topicInterval": "30",
+    "MOTDChan": "[CAPSTEXT]",
+    "updatetopic": true,
+    "restricted": 0
+  },
+  "telegramModule": {
+    "token": "5450395597:AAF9c7GGgYtzs-aBlhyX0Ubz9jU98iV4HP4",
+    "ProxyAddress": "0",
+    "ProxyPort": 0,
+    "ProxyUsername": "",
+    "ProxyPassword": "",
+    "RelayFromTelegram": true,
+    "RelayFromDiscord": true,
+    "RelayChannels": [
+      {
+        "telegram": -1451210040,
+        "discord": 1002257287328567387,
+        "discordFilters": [
+          "!auth",
+          "/join"
+        ],
+        "discordAllowFilters": [
+          "@everyone"
+        ],
+        "discordFiltersStartsWith": [
+          "/"
+        ],
+        "telegramFilters": [],
+        "telegramFiltersStartsWith": [
+          ""
+        ],
+        "relayFromDiscordBotOnly": true,
+        "telegramUsers": [
+          "@Inqtrol",
+          "@armor_drake"
+        ]
+      }
+    ]
+  },
+  "chatRelayModule": {
+    "RelayChannels": [
+      {
+        "eveChannelName": "[CAPSTEXT]",
+        "discordChannelId": 1002257287328567387,
+        "code": "F"
+      }
+    ]
+  },
+  "IndustrialJobsModule": {
+    "CheckIntervalInMinutes": 5,
+    "UseOneAuthButton": false,
+    "AuthButtonDiscordText": "Industry Auth",
+    "Groups": {
+      "groupName1": {
+        "IsEnabled": true,
+        "DiscordChannels": [
+          989671528645922846
+        ],
+        "CharacterEntities": [],
+        "Filters": {
+          "filter1": {
+            "DiscordChannels": [
+              989671528645922846
+            ],
+            "FeedPersonalJobs": true,
+            "FeedCorporateJobs": true,
+            "FeedStartingJobs": false,
+            "FeedCancelledJobs": false,
+            "FeedReadyJobs": true,
+            "FeedDeliveredJobs": false,
+            "FeedPausedJobs": false,
+            "FeedRevertedJobs": false,
+            "FeedResearchJobs": true,
+            "FeedCopyingJobs": true,
+            "FeedInventionJobs": true,
+            "FeedReactionJobs": true,
+            "FeedBuildJobs": true
+          }
+        },
+        "ButtonText": "Industry Auth"
+      }
+    }
+  },
+  "MiningScheduleModule": {
+    "AuthButtonDiscordText": "Mining Schedule Auth",
+    "AuthAccessEntities": [],
+    "AuthAccessDiscordRoles": [
+      "Admins"
+    ],
+    "Extractions": {
+      "ViewAccessEntities": [],
+      "ViewAccessDiscordRoles": [
+        "Member"
+      ],
+      "ComplexAccess": {
+        "AccessEntry1": {
+          "Entities": [],
+          "DiscordRoles": [],
+          "CanManageOwnCorporation": false,
+          "StructureNames": []
+        }
+      }
+    },
+    "Ledger": {
+      "ViewAccessEntities": [],
+      "ViewAccessDiscordRoles": [
+        "Admins"
+      ],
+      "ComplexAccess": {
+        "AccessEntry1": {
+          "Entities": [],
+          "DiscordRoles": [
+            "Admins"
+          ],
+          "CanManageOwnCorporation": true,
+          "StructureNames": []
+        }
+      }
+    }
+  },
+  "StructureManagementModule": {
+    "AuthButtonDiscordText": "Structure Management Auth",
+    "AuthAccessEntities": [
+      1397530396,
+      1609387042,
+      1950260451,
+      2112228637,
+      2115266970,
+      2116338809,
+      2117392582,
+      2118213032,
+      2119664271,
+      404347999,
+      903243860,
+      95195707,
+      95387609,
+      97203987,
+      97203987,
+      97203987,
+      994497848
+    ],
+    "AuthAccessDiscordRoles": [
+      "Admins"
+    ],
+    "ViewAccessEntities": [],
+    "ViewAccessDiscordRoles": [
+      "Memder"
+    ],
+    "ComplexAccess": {
+      "AccessEntry1": {
+        "Entities": [],
+        "DiscordRoles": [
+          "Admins"
+        ],
+        "StructureNames": [],
+        "CustomNotifications": {
+          "UnanchoringHours": [
+            1,
+            24
+          ],
+          "UnanchoringDiscordChannelIds": [
+            989672585929302056
+          ]
+        }
+      }
+    }
+  },
+  "MoonTableModule": {
+    "ViewAccessEntities": [],
+    "ViewAccessDiscordRoles": [
+      "Admins",
+      "Member"
+    ],
+    "LimitedAccessEntities": [],
+    "LimitedAccessDiscordRoles": [
+      "Member"
+    ]
+  },
+  "StorageConsoleModule": {
+    "NameFormattingLength": 20,
+    "ListAccessRoles": [
+      "Admins"
+    ],
+    "EditAccessRoles": [
+      "Admins"
+    ]
+  }
+}
